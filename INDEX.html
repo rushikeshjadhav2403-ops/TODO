@@ -1,0 +1,1654 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>E-Summit 2026 | E-Cell MET</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet"
+>
+
+
+<style>
+
+/* ==============================
+   RESET
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #070707;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+
+/* ==============================
+   BACKGROUND
+================================ */
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(200, 30, 30, 0.13),
+      transparent 32%
+    ),
+
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(130, 10, 10, 0.09),
+      transparent 32%
+    );
+
+  z-index: -1;
+}
+
+
+/* ==============================
+   NAVBAR
+================================ */
+
+.navbar {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  width: 100%;
+
+  padding: 20px 7%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: rgba(7,7,7,0.96);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid #321717;
+}
+
+
+.logo {
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+.logo span {
+
+  color: #d52c2c;
+}
+
+
+.nav-links {
+
+  display: flex;
+
+  gap: 25px;
+
+  list-style: none;
+}
+
+
+.nav-links a {
+
+  color: #999;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+
+.nav-links a:hover {
+
+  color: #e63939;
+}
+
+
+/* ==============================
+   CONTAINER
+================================ */
+
+.container {
+
+  width: min(1100px, 92%);
+
+  margin: auto;
+
+  padding: 70px 0;
+}
+
+
+/* ==============================
+   HERO
+================================ */
+
+.hero {
+
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+
+.badge {
+
+  display: inline-block;
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  border: 1px solid #612121;
+
+  background: rgba(160,20,20,0.06);
+
+  color: #df3b3b;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 20px;
+}
+
+
+.hero h1 {
+
+  font-size: clamp(45px, 8vw, 82px);
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+
+  margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+
+  color: #a92727;
+}
+
+
+.hero p {
+
+  max-width: 650px;
+
+  margin: auto;
+
+  color: #999;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+}
+
+
+/* ==============================
+   EVENT CARDS
+================================ */
+
+.event-info {
+
+  display: grid;
+
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+
+.info-card {
+
+  padding: 24px;
+
+  background: #0d0d0d;
+
+  border: 1px solid #321a1a;
+
+  border-radius: 16px;
+
+  transition: 0.25s;
+}
+
+
+.info-card:hover {
+
+  transform: translateY(-3px);
+
+  border-color: #8b2b2b;
+}
+
+
+.info-card small {
+
+  display: block;
+
+  color: #777;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 9px;
+}
+
+
+.info-card strong {
+
+  font-size: 15px;
+
+  color: #eee;
+}
+
+
+/* ==============================
+   BUTTON
+================================ */
+
+.register-btn {
+
+  display: inline-block;
+
+  padding: 15px 24px;
+
+  margin-top: 20px;
+
+  background: #c92828;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: 0.2s;
+}
+
+
+.register-btn:hover {
+
+  background: #e13b3b;
+
+  transform: translateY(-2px);
+}
+
+
+/* ==============================
+   SECTIONS
+================================ */
+
+.section {
+
+  padding: 85px 0;
+
+  border-top: 1px solid #251515;
+}
+
+
+.section h2 {
+
+  font-size: 42px;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 20px;
+}
+
+
+.section h2 span {
+
+  color: #a92727;
+}
+
+
+.section > .container > p {
+
+  max-width: 750px;
+
+  color: #999;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+}
+
+
+/* ==============================
+   ABOUT
+================================ */
+
+.about-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+
+  margin-top: 35px;
+}
+
+
+.about-card {
+
+  background: #0d0d0d;
+
+  border: 1px solid #321a1a;
+
+  border-radius: 16px;
+
+  padding: 28px;
+
+  transition: 0.25s;
+}
+
+
+.about-card:hover {
+
+  border-color: #852929;
+
+  transform: translateY(-3px);
+}
+
+
+.about-card h3 {
+
+  font-size: 18px;
+
+  margin-bottom: 12px;
+}
+
+
+.about-card p {
+
+  color: #999;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ==============================
+   FORM
+================================ */
+
+.form-card {
+
+  background: #0d0d0d;
+
+  border: 1px solid #351919;
+
+  border-radius: 22px;
+
+  padding: clamp(25px,5vw,50px);
+}
+
+
+.form-heading {
+
+  margin-bottom: 35px;
+}
+
+
+.form-heading h2 {
+
+  font-size: 30px;
+
+  margin-bottom: 8px;
+}
+
+
+.form-heading p {
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+.section-title {
+
+  margin: 30px 0 16px;
+
+  color: #d33232;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+
+.grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+
+.field {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.field.full {
+
+  grid-column: 1 / -1;
+}
+
+
+label {
+
+  color: #aaa;
+
+  font-size: 13px;
+}
+
+
+input,
+select,
+textarea {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid #332020;
+
+  background: #080808;
+
+  color: white;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+  border-color: #bd3030;
+
+  box-shadow: 0 0 0 2px rgba(190,40,40,0.08);
+}
+
+
+textarea {
+
+  min-height: 110px;
+
+  resize: vertical;
+}
+
+
+select option {
+
+  background: #111;
+}
+
+
+/* ==============================
+   PHONE
+================================ */
+
+.phone-help {
+
+  color: #666;
+
+  font-size: 11px;
+}
+
+
+.phone-error {
+
+  display: none;
+
+  color: #ff6464;
+
+  font-size: 12px;
+}
+
+
+/* ==============================
+   CHECKBOX
+================================ */
+
+.checkbox {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 25px;
+
+  align-items: flex-start;
+}
+
+
+.checkbox input {
+
+  width: auto;
+
+  margin-top: 3px;
+
+  accent-color: #c92828;
+}
+
+
+.checkbox label {
+
+  color: #777;
+
+  line-height: 1.5;
+}
+
+
+/* ==============================
+   SUBMIT
+================================ */
+
+.submit-btn {
+
+  width: 100%;
+
+  padding: 16px;
+
+  margin-top: 28px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #c92828;
+
+  color: white;
+
+  font-weight: 700;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.submit-btn:hover {
+
+  background: #e13b3b;
+
+  transform: translateY(-1px);
+}
+
+
+.submit-btn:disabled {
+
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* ==============================
+   SUCCESS
+================================ */
+
+.success {
+
+  display: none;
+
+  text-align: center;
+
+  padding: 50px 20px;
+}
+
+
+.success-icon {
+
+  width: 70px;
+
+  height: 70px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin: auto auto 25px;
+
+  border-radius: 50%;
+
+  border: 1px solid #bd3030;
+
+  color: #e13b3b;
+
+  font-size: 27px;
+}
+
+
+.success h2 {
+
+  font-size: 30px;
+
+  margin-bottom: 12px;
+}
+
+
+.success p {
+
+  color: #777;
+
+  line-height: 1.7;
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+.footer {
+
+  text-align: center;
+
+  padding: 30px;
+
+  border-top: 1px solid #251515;
+
+  color: #555;
+
+  font-size: 12px;
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media(max-width:700px) {
+
+  .navbar {
+
+    padding: 18px 5%;
+  }
+
+  .nav-links {
+
+    gap: 12px;
+  }
+
+  .nav-links a {
+
+    font-size: 11px;
+  }
+
+  .event-info,
+  .about-grid,
+  .grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .field.full {
+
+    grid-column: auto;
+  }
+
+  .hero h1 {
+
+    letter-spacing: -2px;
+  }
+
+  .section h2 {
+
+    font-size: 34px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+     NAVIGATION
+================================ -->
+
+<nav class="navbar">
+
+  <div class="logo">
+    E-CELL <span>MET</span>
+  </div>
+
+
+  <ul class="nav-links">
+
+    <li>
+      <a href="#home">Home</a>
+    </li>
+
+    <li>
+      <a href="#about">About Us</a>
+    </li>
+
+    <li>
+      <a href="#register">Register</a>
+    </li>
+
+  </ul>
+
+</nav>
+
+
+
+<!-- ==============================
+     HOME
+================================ -->
+
+<section id="home" class="container">
+
+
+  <div class="hero">
+
+    <div class="badge">
+      E-Cell MET • Presents
+    </div>
+
+
+    <h1>
+
+      E-Summit<br>
+
+      <span>2026</span>
+
+    </h1>
+
+
+    <p>
+
+      An entrepreneurship summit bringing together
+      students, innovators, creators and future
+      entrepreneurs to learn, connect and build the future.
+
+    </p>
+
+  </div>
+
+
+
+  <div class="event-info">
+
+
+    <div class="info-card">
+
+      <small>
+        Event Name
+      </small>
+
+      <strong>
+        E-Summit 2026
+      </strong>
+
+    </div>
+
+
+    <div class="info-card">
+
+      <small>
+        Event Date
+      </small>
+
+      <strong>
+        24 September 2026
+      </strong>
+
+    </div>
+
+
+    <div class="info-card">
+
+      <small>
+        Organized By
+      </small>
+
+      <strong>
+        E-Cell MET
+      </strong>
+
+    </div>
+
+
+  </div>
+
+
+  <a
+    href="#register"
+    class="register-btn"
+  >
+    Register Now →
+  </a>
+
+
+</section>
+
+
+
+<!-- ==============================
+     ABOUT
+================================ -->
+
+<section id="about" class="section">
+
+  <div class="container">
+
+
+    <div class="badge">
+      About E-Summit
+    </div>
+
+
+    <h2>
+
+      Ideas that become<br>
+
+      <span>impact.</span>
+
+    </h2>
+
+
+    <p>
+
+      E-Summit 2026 is an entrepreneurship-focused
+      event organized by E-Cell MET. The event provides
+      students with a platform to explore entrepreneurship,
+      innovation and business while connecting with
+      fellow students and members of the entrepreneurial
+      ecosystem.
+
+    </p>
+
+
+    <p style="margin-top:18px;">
+
+      Through engaging sessions, activities and
+      interactions, E-Summit encourages students to
+      think creatively, develop ideas and explore
+      opportunities beyond the classroom.
+
+    </p>
+
+
+
+    <div class="about-grid">
+
+
+      <div class="about-card">
+
+        <h3>
+          Our Vision
+        </h3>
+
+        <p>
+
+          Encourage students to think creatively and
+          explore entrepreneurship as a way to turn
+          ideas into meaningful initiatives.
+
+        </p>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <h3>
+          Our Mission
+        </h3>
+
+        <p>
+
+          Build a student community where ideas,
+          learning and collaboration can come together.
+
+        </p>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <h3>
+          Who Can Participate?
+        </h3>
+
+        <p>
+
+          Students interested in startups,
+          entrepreneurship, innovation, business and
+          new ideas are welcome.
+
+        </p>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <h3>
+          Event Date
+        </h3>
+
+        <p>
+
+          E-Summit 2026 will be held on
+          <strong>24 September 2026</strong>.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <a
+      href="#register"
+      class="register-btn"
+    >
+      Join E-Summit →
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==============================
+     REGISTRATION
+================================ -->
+
+<section id="register" class="section">
+
+  <div class="container">
+
+
+    <div class="form-card">
+
+
+      <div id="registrationForm">
+
+
+        <div class="form-heading">
+
+          <div class="badge">
+            Student Registration
+          </div>
+
+
+          <h2>
+            Register for E-Summit
+          </h2>
+
+
+          <p>
+            24 September 2026 • E-Cell MET
+          </p>
+
+        </div>
+
+
+
+        <form id="eventForm">
+
+
+          <!-- PERSONAL -->
+
+          <div class="section-title">
+            Personal Information
+          </div>
+
+
+          <div class="grid">
+
+
+            <div class="field">
+
+              <label for="name">
+                Full Name *
+              </label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Your full name"
+                required
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="email">
+                Email Address *
+              </label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="phone">
+                Mobile Number *
+              </label>
+
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="10-digit mobile number"
+                inputmode="numeric"
+                maxlength="10"
+                autocomplete="tel"
+                required
+              >
+
+              <span
+                class="phone-help"
+              >
+                Enter exactly 10 digits.
+              </span>
+
+              <span
+                class="phone-error"
+                id="phoneError"
+              >
+                Please enter exactly 10 digits.
+              </span>
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="gender">
+                Gender
+              </label>
+
+              <select
+                id="gender"
+                name="gender"
+              >
+
+                <option value="">
+                  Prefer not to say
+                </option>
+
+                <option>
+                  Male
+                </option>
+
+                <option>
+                  Female
+                </option>
+
+                <option>
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+          </div>
+
+
+
+          <!-- ACADEMIC -->
+
+          <div class="section-title">
+            Academic Information
+          </div>
+
+
+          <div class="grid">
+
+
+            <div class="field">
+
+              <label for="college">
+                College / Institute *
+              </label>
+
+              <input
+                id="college"
+                name="college"
+                type="text"
+                placeholder="College name"
+                required
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="course">
+                Course / Branch *
+              </label>
+
+              <input
+                id="course"
+                name="course"
+                type="text"
+                placeholder="e.g. Computer Engineering"
+                required
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="year">
+                Year of Study *
+              </label>
+
+              <select
+                id="year"
+                name="year"
+                required
+              >
+
+                <option value="">
+                  Select year
+                </option>
+
+                <option>
+                  1st Year
+                </option>
+
+                <option>
+                  2nd Year
+                </option>
+
+                <option>
+                  3rd Year
+                </option>
+
+                <option>
+                  4th Year
+                </option>
+
+                <option>
+                  Diploma
+                </option>
+
+                <option>
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="studentId">
+                Student ID / Roll No.
+              </label>
+
+              <input
+                id="studentId"
+                name="studentId"
+                type="text"
+                placeholder="Optional"
+              >
+
+            </div>
+
+
+          </div>
+
+
+
+          <!-- EVENT -->
+
+          <div class="section-title">
+            Event Information
+          </div>
+
+
+          <div class="grid">
+
+
+            <div class="field">
+
+              <label for="event">
+                Event
+              </label>
+
+              <input
+                id="event"
+                name="event"
+                value="E-Summit 2026"
+                readonly
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="participation">
+                Participation Type *
+              </label>
+
+              <select
+                id="participation"
+                name="participation"
+                required
+              >
+
+                <option value="">
+                  Choose type
+                </option>
+
+                <option>
+                  Individual
+                </option>
+
+                <option>
+                  Team
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="field full">
+
+              <label for="idea">
+                Do you have a startup / idea?
+              </label>
+
+              <textarea
+                id="idea"
+                name="idea"
+                placeholder="Tell us briefly about your idea (optional)"
+              ></textarea>
+
+            </div>
+
+
+          </div>
+
+
+
+          <!-- CONSENT -->
+
+          <div class="checkbox">
+
+            <input
+              type="checkbox"
+              id="consent"
+              required
+            >
+
+            <label for="consent">
+
+              I confirm that the information provided
+              above is accurate and I agree to be
+              contacted regarding E-Summit 2026.
+
+            </label>
+
+          </div>
+
+
+
+          <button
+            type="submit"
+            class="submit-btn"
+            id="submitBtn"
+          >
+
+            REGISTER FOR E-SUMMIT →
+
+          </button>
+
+
+        </form>
+
+      </div>
+
+
+
+      <!-- SUCCESS -->
+
+      <div
+        class="success"
+        id="successMessage"
+      >
+
+        <div class="success-icon">
+          ✓
+        </div>
+
+
+        <h2>
+          Registration Complete
+        </h2>
+
+
+        <p>
+
+          Thank you for registering for
+          E-Summit 2026.<br><br>
+
+          Your registration has been received successfully.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==============================
+     FOOTER
+================================ -->
+
+<footer class="footer">
+
+  E-Cell MET • E-Summit 2026 •
+  24 September 2026
+
+</footer>
+
+
+
+<script>
+
+/* =====================================
+   GET FORM ELEMENTS
+===================================== */
+
+const form =
+  document.getElementById("eventForm");
+
+const phoneInput =
+  document.getElementById("phone");
+
+const phoneError =
+  document.getElementById("phoneError");
+
+const submitBtn =
+  document.getElementById("submitBtn");
+
+
+/* =====================================
+   MOBILE NUMBER
+
+   ONLY NUMBERS
+   MAXIMUM 10 DIGITS
+===================================== */
+
+phoneInput.addEventListener(
+  "input",
+  function () {
+
+    this.value =
+      this.value
+        .replace(/[^0-9]/g, "")
+        .substring(0, 10);
+
+    if (this.value.length === 10) {
+
+      phoneError.style.display =
+        "none";
+
+    }
+
+  }
+);
+
+
+/* =====================================
+   FORM SUBMISSION
+===================================== */
+
+form.addEventListener(
+  "submit",
+  function(event) {
+
+    event.preventDefault();
+
+
+    /* Validate phone */
+
+    if (
+      !/^[0-9]{10}$/.test(
+        phoneInput.value
+      )
+    ) {
+
+      phoneError.style.display =
+        "block";
+
+      phoneInput.focus();
+
+      return;
+
+    }
+
+
+    /* Disable button */
+
+    submitBtn.disabled = true;
+
+    submitBtn.textContent =
+      "REGISTERING...";
+
+
+    /*
+      Collect all form data
+    */
+
+    const formData =
+      new FormData(form);
+
+
+    const registration = {
+
+      name:
+        formData.get("name"),
+
+      email:
+        formData.get("email"),
+
+      phone:
+        formData.get("phone"),
+
+      gender:
+        formData.get("gender"),
+
+      college:
+        formData.get("college"),
+
+      course:
+        formData.get("course"),
+
+      year:
+        formData.get("year"),
+
+      studentId:
+        formData.get("studentId"),
+
+      event:
+        formData.get("event"),
+
+      participation:
+        formData.get("participation"),
+
+      idea:
+        formData.get("idea"),
+
+      registeredAt:
+        new Date().toLocaleString()
+
+    };
+
+
+    /*
+      TEMPORARY STORAGE
+
+      This allows you to test the website
+      before connecting Google Sheets.
+    */
+
+    const registrations =
+      JSON.parse(
+        localStorage.getItem(
+          "esummitRegistrations"
+        ) || "[]"
+      );
+
+
+    registrations.push(
+      registration
+    );
+
+
+    localStorage.setItem(
+      "esummitRegistrations",
+      JSON.stringify(
+        registrations
+      )
+    );
+
+
+    /*
+      Show success message
+    */
+
+    document.getElementById(
+      "registrationForm"
+    ).style.display = "none";
+
+
+    document.getElementById(
+      "successMessage"
+    ).style.display = "block";
+
+
+    /*
+      Reset form
+    */
+
+    form.reset();
+
+
+  }
+);
+
+</script>
+
+
+</body>
+
+</html>
+```
